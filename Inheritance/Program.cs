@@ -8,32 +8,50 @@ namespace Inheritance
         {
             // TODO Be sure to follow best practice when creating your classes
 
-            // Create a class Animal
-            // give this class 4 members that all Animals have in common
-
-
-            // Create a class Bird
-            // give this class 4 members that are specific to Bird
-            // Set this class to inherit from your Animal Class
-
-            // Create a class Reptile
-            // give this class 4 members that are specific to Reptile
-            // Set this class to inherit from your Animal Class
-
-
-
 
             /*Create an object of your Bird class
              *  give values to your members using the object of your Bird class
              *  
              * Creatively display the class member values 
+             * 
              */
+
+            var owl = new Bird()
+            {
+                IsMigratory = false,
+                IsNocturnal = true,
+                WingSpanInches = 42,
+                Colors = "brown and White",
+                SpeciesType = "northern spotted",
+                Ecosystem = "old growth forests",    
+            };
+
+            owl.MakesNoise("hoot hoot");
+            owl.EatsFood("eats red tree vole");
+
+            Console.WriteLine("Welcome to the animal guessing game!");
+            Console.WriteLine("Guess the animal based of the clues");
+          
+
 
             /*Create an object of your Reptile class
              *  give values to your members using the object of your Reptile class
              *  
              * Creatively display the class member values 
              */
+
+            var alligator = new Reptiles();
+            alligator.HasLegs = true;
+            alligator.HaveScales = true;
+            alligator.IsNocturnal = true;
+            alligator.LikeWater = true;
+            alligator.Habitat = "wetlands";
+            alligator.SpeciesType = "american alligator";
+
+            alligator.MakesNoise("grunt");
+            alligator.EatsFood("eats fish");
+
+            
         }
     }
 }
