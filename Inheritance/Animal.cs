@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 namespace Inheritance
 {
 	public class Animal
@@ -8,17 +9,12 @@ namespace Inheritance
 
 		public bool IsNocturnal { get; set; }
 		public string SpeciesType { get; set;  }
+		public string Diet { get; set; }
+		public string Habitat { get; set; }
 
-		public void MakesNoise(string animalNoise)
-		{
-			Console.WriteLine(animalNoise);
-		}
 
-		public void EatsFood(string foodType)
-		{
-			Console.WriteLine(foodType);
-		}
-		
+
+
         public Animal()
 		{
 		}

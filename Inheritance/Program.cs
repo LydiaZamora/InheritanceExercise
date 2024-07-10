@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Inheritance
 {
@@ -8,13 +9,7 @@ namespace Inheritance
         {
             // TODO Be sure to follow best practice when creating your classes
 
-
-            /*Create an object of your Bird class
-             *  give values to your members using the object of your Bird class
-             *  
-             * Creatively display the class member values 
-             * 
-             */
+            var animals = new Animal();
 
             var owl = new Bird()
             {
@@ -26,12 +21,10 @@ namespace Inheritance
                 Ecosystem = "old growth forests",    
             };
 
+            animals.DataBase.Add(owl);       
+            
             owl.MakesNoise("hoot hoot");
             owl.EatsFood("eats red tree vole");
-
-            Console.WriteLine("Welcome to the animal guessing game!");
-            Console.WriteLine("Guess the animal based of the clues");
-          
 
 
             /*Create an object of your Reptile class
@@ -51,7 +44,13 @@ namespace Inheritance
             alligator.MakesNoise("grunt");
             alligator.EatsFood("eats fish");
 
-            
+            animals.DataBase.Add(alligator);
+
+            foreach(var animal in animals.DataBase)
+            {
+                Console.WriteLine($"Type of Species: {animal.SpeciesType}");
+                Console.WriteLine($"Is Nocturnal: {animal.IsNocturnal}");
+            }
         }
     }
 }
