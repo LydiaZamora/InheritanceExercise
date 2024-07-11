@@ -13,7 +13,7 @@ namespace Inheritance
 		public string Habitat { get; set; }
 
 
-
+		public List<Animal> DataBase = new List<Animal>();
 
         public Animal()
 		{

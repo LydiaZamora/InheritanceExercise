@@ -7,9 +7,9 @@ namespace Inheritance
      // give this class 4 members that are specific to Reptile
      // Set this class to inherit from your Animal Class
 
-      public bool LikeWater { get; set; }
-      public bool HaveScales { get; set; }
-      public string Habitat { get; set; }
+      public bool CanSwim { get; set; }
+      public string TypeOfSkin { get; set; }
+      public bool IsDangerous { get; set; }
       public bool HasLegs { get; set; }
 
 

@@ -17,15 +17,14 @@ namespace Inheritance
                 IsNocturnal = true,
                 WingSpanInches = 42,
                 Colors = "brown and White",
-                SpeciesType = "northern spotted",
-                Ecosystem = "old growth forests",    
+                SpeciesType = "northern spotted owl",
+                Habitat = "old growth forests",
+                Diet = "voles, birds and snakes",
+                Endangered = false, 
             };
 
-            animals.DataBase.Add(owl);       
+                  
             
-            owl.MakesNoise("hoot hoot");
-            owl.EatsFood("eats red tree vole");
-
 
             /*Create an object of your Reptile class
              *  give values to your members using the object of your Reptile class
@@ -35,21 +34,48 @@ namespace Inheritance
 
             var alligator = new Reptiles();
             alligator.HasLegs = true;
-            alligator.HaveScales = true;
+            alligator.TypeOfSkin = "Scaley";
             alligator.IsNocturnal = true;
-            alligator.LikeWater = true;
+            alligator.CanSwim = true;
             alligator.Habitat = "wetlands";
             alligator.SpeciesType = "american alligator";
+            alligator.IsDangerous = true;
+            alligator.Diet = "fish, small mammals, brids";
 
-            alligator.MakesNoise("grunt");
-            alligator.EatsFood("eats fish");
 
+            animals.DataBase.Add(owl);
             animals.DataBase.Add(alligator);
 
             foreach(var animal in animals.DataBase)
             {
-                Console.WriteLine($"Type of Species: {animal.SpeciesType}");
-                Console.WriteLine($"Is Nocturnal: {animal.IsNocturnal}");
+                Console.WriteLine($"Species: {animal.SpeciesType}");
+                Console.WriteLine($"Habitat: {animal.Habitat}");
+                Console.WriteLine($"Is Nocturnal: {animal.IsNocturnal}");          
+                Console.WriteLine($"Diet {animal.Diet}");
+
+            }
+
+            Console.WriteLine("--------------------------------------------------------------");
+
+            Console.WriteLine("Type 'more' if you want more information on these two aniamls");
+            var userResponse = Console.ReadLine().ToLower();
+
+            if(userResponse.Contains("more"))
+            {
+                Console.WriteLine("The Northern Spotted Owl");
+                Console.WriteLine($"Is Migratory:{owl.IsMigratory}");
+                Console.WriteLine($"Wing Span: {owl.WingSpanInches}");
+                Console.WriteLine($"Colors {owl.Colors}");
+                Console.WriteLine($"Is Endangered:{owl.Endangered}");
+
+                Console.WriteLine("----------------------------------");
+
+                Console.WriteLine("The American Alligator");
+                Console.WriteLine($"Has Legs:{alligator.HasLegs}");
+                Console.WriteLine($"Type of Skin:{alligator.TypeOfSkin}");
+                Console.WriteLine($"Can Swim{alligator.CanSwim}");
+                Console.WriteLine($"Is Dangerous:{alligator.IsDangerous}");
+
             }
         }
     }
